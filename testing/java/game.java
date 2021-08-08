@@ -4,6 +4,7 @@ static String clear = "\033[H\033[2J";
 	static void random_mode() {
 		Boolean t=false, two=false;
 		int a,b,c,d;
+		String con;
 		Scanner z = new Scanner(System.in);
 		System.out.println(clear);
 	/*	while(t==false) {
@@ -15,24 +16,39 @@ static String clear = "\033[H\033[2J";
 				two = true;
 				case "2":
 				t = true;
-				break;
 				default:
 				System.out.println(clear);
 				break;
 			}
 		} */
-		System.out.println("Enter:");
-		System.out.println("");
-		System.out.println("1. The number of stones in the heap that must be reached or exceeded.");
-		a = z.nextInt();
-		System.out.println("2. How many stones can be thrown into a pile?");
-		b = z.nextInt();
-		System.out.println("3. How many times can you increase the pile?");
-		c = z.nextInt();
-		System.out.println("4. The initial amount of stones in the heap?");
-		d = z.nextInt();
-		System.out.println(clear);
-	//	System.out.println	
+//		t = false;
+		while(t == false) {
+			System.out.println("Enter:");
+			System.out.println("");
+			System.out.println("1. The number of stones in the heap that must be reached or exceeded.");
+			a = z.nextInt();
+			System.out.println("2. How many stones can be thrown into a pile?");
+			b = z.nextInt();
+			System.out.println("3. How many times can you increase the pile?");
+			c = z.nextInt();
+			System.out.println("4. The initial amount of stones in the heap?");
+			d = z.nextInt();
+			System.out.println(clear);
+			System.out.println("So:");
+			System.out.println("");
+			System.out.println("The game will end when there are " + a +" stones in the heap.");
+			System.out.println("You can add to the heap " + b +" stones.");
+			System.out.println("Or increase the pile by " + c +" times.");
+			System.out.println("Now in a pile of " + d +" stones.");
+			System.out.println("");
+			System.out.println("Enter 1 to contiune or other key to edit data.");
+			switch(z.next()) {
+				case "1":
+				t = true;
+				break;
+			}
+			System.out.println(clear);	
+		}
 		
 	}
 	public static void main(String[] args){
